@@ -137,7 +137,7 @@ enum BookLoaderState: CaseIterable {
         case .closeRight:
             return (CGSize(width: -84, height: 55.75), Angle.degrees(180), CGSize(width: 28, height: -28), Angle.degrees(90), CGSize(width: 84, height: 0), Angle.degrees(0))
         case .closeLeft:
-            return (CGSize(width: -84, height: 0), Angle.degrees(0), CGSize(width: 28, height: 28), Angle.degrees(-90), CGSize(width: 84, height: 55.75), Angle.degrees(-180))
+            return (CGSize(width: -84, height: 0), Angle.degrees(0), CGSize(width: -28, height: -28), Angle.degrees(-90), CGSize(width: 84, height: 55.75), Angle.degrees(-180))
         }
     }
 }

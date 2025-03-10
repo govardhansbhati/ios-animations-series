@@ -29,7 +29,7 @@ struct BookPagesView: View {
                 .animation(Animation.easeInOut(duration: animationDuration), value: UUID())
             
             Capsule().foregroundColor(.white).frame(width: pageWidth, height: 8)
-                .offset(x: pageXOffset, y: leftYOffset)
+                .offset(x: pageXOffset, y: rightYOffset)
                 .rotationEffect(rightEndDegree)
                 .animation(Animation.easeInOut(duration: animationDuration), value: UUID())
             
