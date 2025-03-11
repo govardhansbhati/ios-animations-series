@@ -71,13 +71,13 @@ struct ContentView: View {
         if isOff {
             withAnimation(Animation.easeIn(duration: animationDuration)) {
                 xScale = 4
-                yScale = 2
-                yOffset = UIScreen.main.bounds.height * 0.8
+                yScale = 4
+                yOffset = 0
             }
         } else {
-            withAnimation(Animation.easeIn(duration: animationDuration)) {
-                xScale = 0.4
-                yScale = 2
+            withAnimation(Animation.easeIn(duration: animationDuration * 0.75)) {
+                yScale = 0.4
+                xScale = 2
                 yOffset = UIScreen.main.bounds.height * 0.8
             }
         }
