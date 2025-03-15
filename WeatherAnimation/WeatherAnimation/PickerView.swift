@@ -21,7 +21,7 @@ struct PickerView: View {
                 .stroke(Color.black, lineWidth: 2)
                 .shadow(color: Color.black, radius: 8, x: 0 , y: 0))
             .clipShape(RoundedRectangle(cornerRadius: 8))
-            .padding(.horizontal, 15)
+            .padding(.horizontal, 10)
             .padding(.bottom, 15)
     }
 }
