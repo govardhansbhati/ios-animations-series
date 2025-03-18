@@ -6,46 +6,41 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		C2C410A62D8893D00077D6D6 /* SunMoonToggleStyle in Frameworks */ = {isa = PBXBuildFile; productRef = C2C410A52D8893D00077D6D6 /* SunMoonToggleStyle */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		C2934BCE2D81EFCF0007D0B3 /* WeatherAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C28991232D89E6F10098387C /* Elevator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elevator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C2934BD02D81EFCF0007D0B3 /* WeatherAnimation */ = {
+		C28991252D89E6F10098387C /* Elevator */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WeatherAnimation;
+			path = Elevator;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C2934BCB2D81EFCF0007D0B3 /* Frameworks */ = {
+		C28991202D89E6F10098387C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2C410A62D8893D00077D6D6 /* SunMoonToggleStyle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C2934BC52D81EFCF0007D0B3 = {
+		C289911A2D89E6F10098387C = {
 			isa = PBXGroup;
 			children = (
-				C2934BD02D81EFCF0007D0B3 /* WeatherAnimation */,
-				C2934BCF2D81EFCF0007D0B3 /* Products */,
+				C28991252D89E6F10098387C /* Elevator */,
+				C28991242D89E6F10098387C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C2934BCF2D81EFCF0007D0B3 /* Products */ = {
+		C28991242D89E6F10098387C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C2934BCE2D81EFCF0007D0B3 /* WeatherAnimation.app */,
+				C28991232D89E6F10098387C /* Elevator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,68 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C2934BCD2D81EFCF0007D0B3 /* WeatherAnimation */ = {
+		C28991222D89E6F10098387C /* Elevator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2934BDD2D81EFE30007D0B3 /* Build configuration list for PBXNativeTarget "WeatherAnimation" */;
+			buildConfigurationList = C28991322D89E6FA0098387C /* Build configuration list for PBXNativeTarget "Elevator" */;
 			buildPhases = (
-				C2934BCA2D81EFCF0007D0B3 /* Sources */,
-				C2934BCB2D81EFCF0007D0B3 /* Frameworks */,
-				C2934BCC2D81EFCF0007D0B3 /* Resources */,
+				C289911F2D89E6F10098387C /* Sources */,
+				C28991202D89E6F10098387C /* Frameworks */,
+				C28991212D89E6F10098387C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				C2934BD02D81EFCF0007D0B3 /* WeatherAnimation */,
+				C28991252D89E6F10098387C /* Elevator */,
 			);
-			name = WeatherAnimation;
+			name = Elevator;
 			packageProductDependencies = (
-				C2C410A52D8893D00077D6D6 /* SunMoonToggleStyle */,
 			);
-			productName = WeatherAnimation;
-			productReference = C2934BCE2D81EFCF0007D0B3 /* WeatherAnimation.app */;
+			productName = Elevator;
+			productReference = C28991232D89E6F10098387C /* Elevator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C2934BC62D81EFCF0007D0B3 /* Project object */ = {
+		C289911B2D89E6F10098387C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					C2934BCD2D81EFCF0007D0B3 = {
+					C28991222D89E6F10098387C = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = C2934BC92D81EFCF0007D0B3 /* Build configuration list for PBXProject "WeatherAnimation" */;
+			buildConfigurationList = C289911E2D89E6F10098387C /* Build configuration list for PBXProject "Elevator" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = C2934BC52D81EFCF0007D0B3;
+			mainGroup = C289911A2D89E6F10098387C;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-				C2C410A42D8893D00077D6D6 /* XCRemoteSwiftPackageReference "SunMoonToggleStyle" */,
-			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = C2934BCF2D81EFCF0007D0B3 /* Products */;
+			productRefGroup = C28991242D89E6F10098387C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C2934BCD2D81EFCF0007D0B3 /* WeatherAnimation */,
+				C28991222D89E6F10098387C /* Elevator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C2934BCC2D81EFCF0007D0B3 /* Resources */ = {
+		C28991212D89E6F10098387C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C2934BCA2D81EFCF0007D0B3 /* Sources */ = {
+		C289911F2D89E6F10098387C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -134,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C2934BDB2D81EFE30007D0B3 /* Debug */ = {
+		C28991302D89E6FA0098387C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -195,7 +186,7 @@
 			};
 			name = Debug;
 		};
-		C2934BDC2D81EFE30007D0B3 /* Release */ = {
+		C28991312D89E6FA0098387C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -248,15 +239,15 @@
 			};
 			name = Release;
 		};
-		C2934BDE2D81EFE30007D0B3 /* Debug */ = {
+		C28991332D89E6FA0098387C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = WeatherAnimation/WeatherAnimation.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Elevator/Elevator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WeatherAnimation/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Elevator/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -274,7 +265,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gsb.WeatherAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gsb.Elevator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -285,15 +276,15 @@
 			};
 			name = Debug;
 		};
-		C2934BDF2D81EFE30007D0B3 /* Release */ = {
+		C28991342D89E6FA0098387C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = WeatherAnimation/WeatherAnimation.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Elevator/Elevator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WeatherAnimation/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Elevator/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -311,7 +302,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gsb.WeatherAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gsb.Elevator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -325,44 +316,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C2934BC92D81EFCF0007D0B3 /* Build configuration list for PBXProject "WeatherAnimation" */ = {
+		C289911E2D89E6F10098387C /* Build configuration list for PBXProject "Elevator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C2934BDB2D81EFE30007D0B3 /* Debug */,
-				C2934BDC2D81EFE30007D0B3 /* Release */,
+				C28991302D89E6FA0098387C /* Debug */,
+				C28991312D89E6FA0098387C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2934BDD2D81EFE30007D0B3 /* Build configuration list for PBXNativeTarget "WeatherAnimation" */ = {
+		C28991322D89E6FA0098387C /* Build configuration list for PBXNativeTarget "Elevator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C2934BDE2D81EFE30007D0B3 /* Debug */,
-				C2934BDF2D81EFE30007D0B3 /* Release */,
+				C28991332D89E6FA0098387C /* Debug */,
+				C28991342D89E6FA0098387C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C2C410A42D8893D00077D6D6 /* XCRemoteSwiftPackageReference "SunMoonToggleStyle" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/puthnith/SunMoonToggleStyle";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C2C410A52D8893D00077D6D6 /* SunMoonToggleStyle */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C2C410A42D8893D00077D6D6 /* XCRemoteSwiftPackageReference "SunMoonToggleStyle" */;
-			productName = SunMoonToggleStyle;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = C2934BC62D81EFCF0007D0B3 /* Project object */;
+	rootObject = C289911B2D89E6F10098387C /* Project object */;
 }

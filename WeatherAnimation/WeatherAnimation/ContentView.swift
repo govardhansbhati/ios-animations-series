@@ -127,7 +127,7 @@ struct ContentView: View {
                         if animateWindImage {
                             Image("wind").resizable().aspectRatio(contentMode: .fit)
                                 .frame(width: geo.size.width / 2, height: geo.size.height / 2)
-                                .position(y: geo.size.height / 2).transition(AnyTransition.offset(y: -300))
+                                .position(y: geo.size.height / 2).transition(AnyTransition.offset(x: -300))
                                 .animation(Animation.easeOut(duration: 1.0), value: UUID())
                         }
                     }.position(x: geo.size.width, y: geo.size.height * 0.6)

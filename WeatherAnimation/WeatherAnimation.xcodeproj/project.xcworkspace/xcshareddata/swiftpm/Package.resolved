@@ -1,0 +1,15 @@
+{
+  "originHash" : "fa3072e1ccf4df7595f0a4ca3dfbbf730d0c97f9aac9b31417d17c873a871909",
+  "pins" : [
+    {
+      "identity" : "sunmoontogglestyle",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/puthnith/SunMoonToggleStyle",
+      "state" : {
+        "revision" : "ec68ad9c6047ee7a806fb740c281c4616bdcdddc",
+        "version" : "0.0.2"
+      }
+    }
+  ],
+  "version" : 3
+}
