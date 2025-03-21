@@ -73,4 +73,13 @@ class DataModel: ObservableObject {
             }
         }
     }
+    
+    func stopTimers() {
+        doorOpenTimer?.invalidate()
+        doorOpenTimer = nil
+        chimesTimer?.invalidate()
+        chimesTimer = nil
+        doorSoundTimer?.invalidate()
+        doorSoundTimer = nil
+    }
 }
