@@ -26,8 +26,13 @@ struct SettingsView: View {
                     
                     // time zone toggle
                     Section(header: Text("Time zone override")) {
-                        
-                    }
+                        Toggle(isOn: $timeZoneOverride) {
+                            HStack {
+                                Image(systemName: "timer")
+                                Text("Override")
+                            }.foregroundStyle(Color.black)
+                        }
+                    }.listRowBackground(Color(UIColor.orange))
                 }
             }
         }
