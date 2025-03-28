@@ -33,6 +33,14 @@ struct SettingsView: View {
                             }.foregroundStyle(Color.black)
                         }
                     }.listRowBackground(Color(UIColor.orange))
+                    
+                    //alarm volume
+                    Section(header: Text("Alarm Volume")) {
+                        Text("Volume \(String(format: "%.0f", volume as Double)) Decibels").foregroundStyle(Color.black)
+                        Slider(value: $volume, in: 0...100) { _  in
+                            // Code to run when slider is moved
+                        }
+                    }
                 }
             }
         }
