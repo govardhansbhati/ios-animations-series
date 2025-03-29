@@ -40,7 +40,16 @@ struct SettingsView: View {
                         Slider(value: $volume, in: 0...100) { _  in
                             // Code to run when slider is moved
                         }
-                    }
+                    }.listRowBackground(Color(UIColor.orange))
+                    
+                    // repeat alarm
+                    Section(header: Text("Repeat Alarm")) {
+                        Picker(selection: $selection, label: Text("Repeat Alarm:")) {
+                            Text("No Repeat").tag(1)
+                            Text("Repeat Once").tag(2)
+                            Text("Repeat Twice").tag(3)
+                        }.foregroundStyle(Color.black)
+                    }.listRowBackground(Color(UIColor.orange))
                 }
             }
         }
