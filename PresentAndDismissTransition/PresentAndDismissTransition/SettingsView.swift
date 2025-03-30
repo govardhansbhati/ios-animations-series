@@ -50,8 +50,28 @@ struct SettingsView: View {
                             Text("Repeat Twice").tag(3)
                         }.foregroundStyle(Color.black)
                     }.listRowBackground(Color(UIColor.orange))
+                    
+                    //save  button
+                    Button(action: {
+                        withAnimation {
+                            self.show = false
+                        }
+                    }) {
+                        HStack {
+                            Spacer()
+                            Text("Save")
+                            Spacer()
+                        }
+                    }.listRowBackground(Color(UIColor.orange))
                 }
-            }
+                .foregroundStyle(Color.white)
+                .listStyle(InsetGroupedListStyle())
+            }.frame(width: 350, height: 625)
+                .cornerRadius(20)
+            
+            Text("Settings").offset(y: -250)
+                .foregroundStyle(Color.black)
+                .font(.title)
         }
     }
 }
