@@ -44,6 +44,16 @@ struct PresentAndDismiss: GeometryEffect {
     }
 }
 
+struct OpenSettingsView : View {
+    var body: some View {
+        VStack {
+            ZStack {
+                //
+            }
+        }
+    }
+}
+
 #Preview {
     ContentView()
 }
