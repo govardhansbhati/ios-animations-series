@@ -11,7 +11,7 @@ struct SettingsView: View {
     @State private var setData = Date()
     @State private var timeZoneOverride = true
     @State private var volume: Double = 25.0
-    @State private var show: Bool
+    @State  var show: Bool
     
     var body: some View {
         ZStack {

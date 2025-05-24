@@ -9,13 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        OpenSettingsView()
     }
 }
 
@@ -45,11 +39,51 @@ struct PresentAndDismiss: GeometryEffect {
 }
 
 struct OpenSettingsView : View {
+    @State private var isShowing = false
+    let gradientBackground = Gradient(colors: [.black, .white, .black])
+    let buttonBorderGradient = LinearGradient(gradient: Gradient(colors: [.black, .white, .black]), startPoint: .bottomLeading, endPoint: .bottomTrailing)
     var body: some View {
         VStack {
             ZStack {
-                //
+                LinearGradient(gradient: gradientBackground, startPoint: .top, endPoint: .bottom).ignoresSafeArea()
+                
+                VStack {
+                    Text("Wake Up").foregroundStyle(Color.black).font(.title)
+                    Image(systemName: "clock").font(.largeTitle)
+                }.offset(y: -25)
+                
+                Button {
+                    withAnimation(.easeInOut(duration: 1.0)) {
+                        self.isShowing = true
+                    }
+                } label: {
+                    Image(systemName: "gear").font(Font.system(size: 20).weight(.bold))
+                }
+                .padding(10)
+                .backgroundStyle(Color.orange)
+                .cornerRadius(30)
+                .foregroundStyle(Color.black)
+                .padding(8)
+                .overlay(RoundedRectangle(cornerRadius: 30)
+                    .stroke(buttonBorderGradient, lineWidth: 5)
+                    .shadow(color: .gray,radius: 5)
+                )
+                .offset(y: 200)
+                
+                if isShowing {
+                    SettingsView(show: isShowing)
+                        .transition(.fly)
+                        .zIndex(1)
+                }
             }
+        }
+    }
+}
+
+extension AnyTransition {
+    static var fly: AnyTransition {
+        get {
+            AnyTransition.modifier(active: PresentAndDismiss(offSetValue: 0), identity: PresentAndDismiss(offSetValue: 1))
         }
     }
 }
