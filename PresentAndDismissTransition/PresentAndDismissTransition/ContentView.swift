@@ -71,7 +71,7 @@ struct OpenSettingsView : View {
                 .offset(y: 200)
                 
                 if isShowing {
-                    SettingsView(show: isShowing)
+                    SettingsView(show: $isShowing)
                         .transition(.fly)
                         .zIndex(1)
                 }
