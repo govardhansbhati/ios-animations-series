@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var animate1 = false
-    @State private var animate2 = false
+    @StateObject private var motion = MotionManager()
     
     var body: some View {
         ZStack {
@@ -22,9 +21,9 @@ struct ContentView: View {
             // MARK: - Title
             VStack {
                 Text("Parallax Effect")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .padding(.top, 80)
+                .font(.title)
+                .fontWeight(.semibold)
+                .padding(.top, 80)
                 
                 // MARK: Wolf image
                 VStack {
@@ -34,11 +33,12 @@ struct ContentView: View {
                         .cornerRadius(25)
                         .shadow(color: .black, radius: 30, x: 5, y: 5)
                 }
-                .rotation3DEffect(.degrees(animate1 ? 13 : -12), axis: (x: animate1 ?  90 : -45, y: animate1 ? -45 : -90, z: 0))
-                .animation(Animation.easeInOut(duration: 3.5).repeatForever(autoreverses: true), value: UUID())
-                .onAppear() {
-                    animate1.toggle()
-                }.padding(30)
+                .rotation3DEffect(.degrees(motion.xTilt * 50), axis: (x: -1, y: 0, z: 0))
+                .rotation3DEffect(.degrees(motion.yTilt * 50), axis: (x: 0, y: 1, z: 0))
+                .padding(30)
+                .onTapGesture {
+                    motion.resetCalibration()
+                }
             }
         }
     }
