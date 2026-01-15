@@ -8,86 +8,188 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        OpenSettingsView()
-    }
-}
-
-struct PresentAndDismiss: GeometryEffect {
-    var offSetValue: Double
-    var animatableData: Double {
-        get { offSetValue }
-        set { offSetValue = newValue }
-    }
+    let screenW = UIScreen.main.bounds.width
+        let screenH = UIScreen.main.bounds.height
     
-    func effectValue(size: CGSize) -> ProjectionTransform {
-        let rotationOffset = offSetValue
-        let angleOfRotation = CGFloat(Angle(degrees: 95 * (1 - rotationOffset)).radians)
-        var transform3D = CATransform3DIdentity
-        transform3D.m34 = -1 / max(size.width, size.height)
-        transform3D = CATransform3DRotate(transform3D, angleOfRotation, 1, 0, 0)
-        transform3D = CATransform3DTranslate(transform3D, -size.width/2.0, -size.height/2.0, 0)
-        let transformAffine1 = ProjectionTransform(CGAffineTransform(translationX: size.width/2.0, y: size.height/2.0))
-        let transformAffine2 = ProjectionTransform(CGAffineTransform(scaleX: CGFloat(offSetValue * 2), y: CGFloat(offSetValue * 2)))
+    @State private var buttonFrame: CGRect = CGRect(
+            x: UIScreen.main.bounds.width / 2,
+            y: UIScreen.main.bounds.height, // Start at bottom
+            width: 100,
+            height: 50
+        )
         
-        if offSetValue <= 0.5 {
-            return ProjectionTransform(transform3D).concatenating(transformAffine2).concatenating(transformAffine1)
-        } else {
-            return ProjectionTransform(transform3D).concatenating(transformAffine1)
-        }
-    }
-}
-
-struct OpenSettingsView : View {
-    @State private var isShowing = false
-    let gradientBackground = Gradient(colors: [.black, .white, .black])
-    let buttonBorderGradient = LinearGradient(gradient: Gradient(colors: [.black, .white, .black]), startPoint: .bottomLeading, endPoint: .bottomTrailing)
+        @State private var squeezeX: CGFloat = 1 // Start squeezed
+        @State private var squeezeY: CGFloat = 1
+        @State private var translateY: CGFloat = 1 // Start translated
+    // UI
+    @State private var isShowingSettings = false
+    
     var body: some View {
-        VStack {
             ZStack {
-                LinearGradient(gradient: gradientBackground, startPoint: .top, endPoint: .bottom).ignoresSafeArea()
+                background
                 
                 VStack {
-                    Text("Wake Up").foregroundStyle(Color.black).font(.title)
-                    Image(systemName: "clock").font(.largeTitle)
-                }.offset(y: -25)
-                
-                Button {
-                    withAnimation(.easeInOut(duration: 1.0)) {
-                        self.isShowing = true
-                    }
-                } label: {
-                    Image(systemName: "gear").font(Font.system(size: 20).weight(.bold))
+                    Spacer()
+                    customizeButton
                 }
-                .padding(10)
-                .backgroundStyle(Color.orange)
-                .cornerRadius(30)
-                .foregroundStyle(Color.black)
-                .padding(8)
-                .overlay(RoundedRectangle(cornerRadius: 30)
-                    .stroke(buttonBorderGradient, lineWidth: 5)
-                    .shadow(color: .gray,radius: 5)
-                )
-                .offset(y: 200)
                 
-                if isShowing {
-                    SettingsView(show: $isShowing)
-                        .transition(.fly)
-                        .zIndex(1)
+                genieLayer
+            }
+            .onPreferenceChange(ButtonFrameKey.self) { newFrame in
+                // Only update if the frame is valid (not zero)
+                if newFrame.width > 0 {
+                    buttonFrame = newFrame
                 }
             }
         }
+}
+
+private extension ContentView {
+    
+    var background: some View {
+        LinearGradient(
+            colors: [.black, .blue.opacity(0.4)],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+        .ignoresSafeArea()
+    }
+    
+    var customizeButton: some View {
+        Button("Customize") {
+            openSettings()
+        }
+        .padding(.horizontal, 40)
+        .padding(.vertical, 18)
+        .background(.ultraThinMaterial, in: Capsule())
+        .background(
+            GeometryReader {
+                Color.clear.preference(
+                    key: ButtonFrameKey.self,
+                    value: $0.frame(in: .global)
+                )
+            }
+        )
+        .opacity(isShowingSettings ? 0 : 1)
+        .animation(.easeInOut, value: isShowingSettings)
+        .padding(.bottom, 60)
     }
 }
 
-extension AnyTransition {
-    static var fly: AnyTransition {
-        get {
-            AnyTransition.modifier(active: PresentAndDismiss(offSetValue: 0), identity: PresentAndDismiss(offSetValue: 1))
+private extension ContentView {
+    
+    var genieLayer: some View {
+            ZStack {
+                if isShowingSettings {
+                    SettingsView {
+                        closeSettings()
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .ignoresSafeArea() // Critical for coordinate matching
+                }
+            }
+            .modifier(
+                GenieEffect(
+                    buttonFrame: buttonFrame,
+                    squeezeX: squeezeX,
+                    squeezeY: squeezeY,
+                    translateY: translateY
+                )
+            )
+            // Hide view when fully collapsed to avoid glitches
+            .opacity(translateY > 0.99 ? 0 : 1)
+            .allowsHitTesting(isShowingSettings)
+            .zIndex(10)
+        }
+
+}
+
+private extension ContentView {
+    
+        
+    func openSettings() {
+        // Start state: Fully collapsed into button
+        squeezeX = 1
+        squeezeY = 1
+        translateY = 1
+        
+        isShowingSettings = true
+        
+        // 1. Rise up (translate)
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+            translateY = 0
+        }
+        
+        // 2. Unfold (squeeze)
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.1)) {
+            squeezeX = 0
+            squeezeY = 0
+        }
+    }
+    
+    func closeSettings() {
+        // 1. Fold (squeeze)
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+            squeezeX = 1
+            squeezeY = 1
+        }
+        
+        // 2. Sink (translate)
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.1)) {
+            translateY = 1
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            isShowingSettings = false
         }
     }
 }
 
-#Preview {
-    ContentView()
+// MARK: - Reference Genie Effect Modifier
+
+// MARK: - Updated Genie Modifier
+// MARK: - Fixed Genie Modifier (Swift)
+struct GenieEffect: ViewModifier {
+    
+    var buttonFrame: CGRect
+    var squeezeX: CGFloat
+    var squeezeY: CGFloat
+    var translateY: CGFloat
+    
+    func body(content: Content) -> some View {
+        content.distortionEffect(
+            Shader(
+                function: .init(library: .default, name: "genie"),
+                arguments: [
+                    .boundingRect,
+                    // Pass specific float values to avoid SIMD/Float errors
+                    .float(Float(buttonFrame.origin.x)),
+                    .float(Float(buttonFrame.origin.y)),
+                    .float(Float(buttonFrame.width)),
+                    .float(Float(buttonFrame.height)),
+                    
+                    .float(squeezeX),
+                    .float(squeezeY),
+                    .float(translateY)
+                ]
+            ),
+            maxSampleOffset: CGSize(width: 500, height: 800)
+        )
+    }
+}
+// 1. Preference Key to capture frames
+struct ButtonFrameKey: PreferenceKey {
+    static var defaultValue: CGRect = .zero
+    static func reduce(value: inout CGRect, nextValue: () -> CGRect) {
+        value = nextValue()
+    }
+}
+
+// Button Scale Effect
+struct ScaleButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.95 : 1)
+            .animation(.easeInOut(duration: 0.2), value: configuration.isPressed)
+    }
 }

@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		C2424D5A2D7CAB6B002D4B97 /* AnimatingCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatingCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F899ADF02F17E05700CD7B50 /* 3DMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C2424D5C2D7CAB6B002D4B97 /* AnimatingCircle */ = {
+		F899ADF22F17E05700CD7B50 /* 3DMap */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AnimatingCircle;
+			path = 3DMap;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C2424D572D7CAB6B002D4B97 /* Frameworks */ = {
+		F899ADED2F17E05700CD7B50 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C2424D512D7CAB6B002D4B97 = {
+		F899ADE72F17E05700CD7B50 = {
 			isa = PBXGroup;
 			children = (
-				C2424D5C2D7CAB6B002D4B97 /* AnimatingCircle */,
-				C2424D5B2D7CAB6B002D4B97 /* Products */,
+				F899ADF22F17E05700CD7B50 /* 3DMap */,
+				F899ADF12F17E05700CD7B50 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C2424D5B2D7CAB6B002D4B97 /* Products */ = {
+		F899ADF12F17E05700CD7B50 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C2424D5A2D7CAB6B002D4B97 /* AnimatingCircle.app */,
+				F899ADF02F17E05700CD7B50 /* 3DMap.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C2424D592D7CAB6B002D4B97 /* AnimatingCircle */ = {
+		F899ADEF2F17E05700CD7B50 /* 3DMap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2424D692D7CAB74002D4B97 /* Build configuration list for PBXNativeTarget "AnimatingCircle" */;
+			buildConfigurationList = F899ADFB2F17E05800CD7B50 /* Build configuration list for PBXNativeTarget "3DMap" */;
 			buildPhases = (
-				C2424D562D7CAB6B002D4B97 /* Sources */,
-				C2424D572D7CAB6B002D4B97 /* Frameworks */,
-				C2424D582D7CAB6B002D4B97 /* Resources */,
+				F899ADEC2F17E05700CD7B50 /* Sources */,
+				F899ADED2F17E05700CD7B50 /* Frameworks */,
+				F899ADEE2F17E05700CD7B50 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				C2424D5C2D7CAB6B002D4B97 /* AnimatingCircle */,
+				F899ADF22F17E05700CD7B50 /* 3DMap */,
 			);
-			name = AnimatingCircle;
+			name = 3DMap;
 			packageProductDependencies = (
 			);
-			productName = AnimatingCircle;
-			productReference = C2424D5A2D7CAB6B002D4B97 /* AnimatingCircle.app */;
+			productName = 3DMap;
+			productReference = F899ADF02F17E05700CD7B50 /* 3DMap.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C2424D522D7CAB6B002D4B97 /* Project object */ = {
+		F899ADE82F17E05700CD7B50 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
-					C2424D592D7CAB6B002D4B97 = {
-						CreatedOnToolsVersion = 16.2;
+					F899ADEF2F17E05700CD7B50 = {
+						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
-			buildConfigurationList = C2424D552D7CAB6B002D4B97 /* Build configuration list for PBXProject "AnimatingCircle" */;
+			buildConfigurationList = F899ADEB2F17E05700CD7B50 /* Build configuration list for PBXProject "3DMap" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = C2424D512D7CAB6B002D4B97;
+			mainGroup = F899ADE72F17E05700CD7B50;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = C2424D5B2D7CAB6B002D4B97 /* Products */;
+			productRefGroup = F899ADF12F17E05700CD7B50 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C2424D592D7CAB6B002D4B97 /* AnimatingCircle */,
+				F899ADEF2F17E05700CD7B50 /* 3DMap */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C2424D582D7CAB6B002D4B97 /* Resources */ = {
+		F899ADEE2F17E05700CD7B50 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C2424D562D7CAB6B002D4B97 /* Sources */ = {
+		F899ADEC2F17E05700CD7B50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C2424D672D7CAB74002D4B97 /* Debug */ = {
+		F899ADF92F17E05800CD7B50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -160,6 +160,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2N62F998QA;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -186,7 +187,7 @@
 			};
 			name = Debug;
 		};
-		C2424D682D7CAB74002D4B97 /* Release */ = {
+		F899ADFA2F17E05800CD7B50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -221,6 +222,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2N62F998QA;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -239,17 +241,18 @@
 			};
 			name = Release;
 		};
-		C2424D6A2D7CAB74002D4B97 /* Debug */ = {
+		F899ADFC2F17E05800CD7B50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AnimatingCircle/AnimatingCircle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AnimatingCircle/Preview Content\"";
 				DEVELOPMENT_TEAM = 2N62F998QA;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -261,33 +264,39 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gsb.AnimatingCircle;
+				PRODUCT_BUNDLE_IDENTIFIER = "bhati.-DMap";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.2;
+				XROS_DEPLOYMENT_TARGET = 26.2;
 			};
 			name = Debug;
 		};
-		C2424D6B2D7CAB74002D4B97 /* Release */ = {
+		F899ADFD2F17E05800CD7B50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AnimatingCircle/AnimatingCircle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AnimatingCircle/Preview Content\"";
 				DEVELOPMENT_TEAM = 2N62F998QA;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -299,44 +308,49 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gsb.AnimatingCircle;
+				PRODUCT_BUNDLE_IDENTIFIER = "bhati.-DMap";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.2;
+				XROS_DEPLOYMENT_TARGET = 26.2;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C2424D552D7CAB6B002D4B97 /* Build configuration list for PBXProject "AnimatingCircle" */ = {
+		F899ADEB2F17E05700CD7B50 /* Build configuration list for PBXProject "3DMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C2424D672D7CAB74002D4B97 /* Debug */,
-				C2424D682D7CAB74002D4B97 /* Release */,
+				F899ADF92F17E05800CD7B50 /* Debug */,
+				F899ADFA2F17E05800CD7B50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2424D692D7CAB74002D4B97 /* Build configuration list for PBXNativeTarget "AnimatingCircle" */ = {
+		F899ADFB2F17E05800CD7B50 /* Build configuration list for PBXNativeTarget "3DMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C2424D6A2D7CAB74002D4B97 /* Debug */,
-				C2424D6B2D7CAB74002D4B97 /* Release */,
+				F899ADFC2F17E05800CD7B50 /* Debug */,
+				F899ADFD2F17E05800CD7B50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C2424D522D7CAB6B002D4B97 /* Project object */;
+	rootObject = F899ADE82F17E05700CD7B50 /* Project object */;
 }
