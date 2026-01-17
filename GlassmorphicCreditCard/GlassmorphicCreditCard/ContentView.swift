@@ -7,9 +7,10 @@
 
 import SwiftUI
 
+@MainActor
 struct ContentView: View {
     
-    enum Phase {
+    nonisolated enum Phase: Equatable {
         case stack
         case rotated
         case ring
@@ -24,6 +25,8 @@ struct ContentView: View {
                 BackgroundOrbsView()
                 
                 ScrollView(.horizontal, showsIndicators: false) {
+                    let currentPhase = self.phase
+                    
                     let layout = phase == .ring ? AnyLayout(HStackLayout(spacing: -40)) : AnyLayout(ZStackLayout())
                     
                     layout {
@@ -37,15 +40,15 @@ struct ContentView: View {
                                 .offset(y: phase == .stack ? CGFloat(2 - index) * -35 : 0)
                                 .zIndex(phase == .stack ? Double(index) : 0) // Stack order vs Natural order
                                 .opacity(phase != .ring && index >= 3 ? 0 : 1) // Hide extra cards in stack
-                                .scrollTransition(.interactive, axis: .horizontal) { view, phase in
+                                .scrollTransition(.interactive, axis: .horizontal) { view, transitionPhase in
                                     view
                                         .rotation3DEffect(
-                                            .degrees(self.phase == .ring ? phase.value * 60 : 0),
+                                            .degrees(currentPhase == .ring ? transitionPhase.value * 60 : 0),
                                             axis: (x: 0, y: 1, z: 0),
                                             perspective: 0.7
                                         )
-                                        .scaleEffect(self.phase == .ring && !phase.isIdentity ? 0.82 : 1)
-                                        .opacity(self.phase == .ring && !phase.isIdentity ? 0.6 : 1)
+                                        .scaleEffect(currentPhase == .ring && !transitionPhase.isIdentity ? 0.82 : 1)
+                                        .opacity(currentPhase == .ring && !transitionPhase.isIdentity ? 0.6 : 1)
                                 }
                                 .onTapGesture {
                                     if phase == .ring {
@@ -95,3 +98,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
