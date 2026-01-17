@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 struct GlassCardView: View {
     
     var body: some View {
@@ -22,8 +21,8 @@ struct GlassCardView: View {
                     // Brushed Metal Texture Effect (Simulated with Gradient)
                     LinearGradient(
                         colors: [.black.opacity(0.1), .clear, .white.opacity(0.1), .clear],
-                        startPoint: UnitPoint(x: 0.5, y: 0),
-                        endPoint: UnitPoint(x: 0.5, y: 1)
+                        startPoint: .top,
+                        endPoint: .bottom
                     )
                     .blendMode(.overlay)
                 )
